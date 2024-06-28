@@ -50,7 +50,6 @@ void imprimirPlanoAlimentar(Alimento refeicoes[][6], char *titulos[], int numRef
 void listaDeCompras(Alimento alimentos[], int numAlimentos) {
     FILE *arquivoCSV = fopen("lista.csv", "w");
     FILE *arquivoTXT = fopen("lista.txt", "w");
-
     if (arquivoCSV == NULL || arquivoTXT == NULL) {
         printf("Erro ao abrir o arquivo de saída.\n");
         return;
