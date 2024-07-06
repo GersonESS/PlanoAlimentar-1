@@ -19,6 +19,7 @@ void escreverCSV(struct produto produtos[], int quantidade) {
         printf("Nao foi possivel abrir o arquivo para escrita.\n");
         exit(1);
     }
+    
 
     // Escrever o cabecalho do CSV
     fprintf(file, "codigo,nome,quantidade,unidade,valor,posicaox,posicaoy\n");
