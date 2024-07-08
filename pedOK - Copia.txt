@@ -7,48 +7,53 @@ faça o programa em c Explicação
   Aveia em flocos 30g    118 Kcal
   Coco            20g     71 Kcal
   Whey 3 Protein  30g    126 Kcal
-  yakult         100ml    51 Kcal
+  yakult         100g    51 Kcal
   Cal 490 Kcal   carb 74g  Fib 10g Prot 21g Gor 15g
 14:00 - Almoço
   Arroz branco    125g   160 Kcal
   Feijão  carioca, 90g    68 Kcal  
   Cenour           50g    43 Kcal
   Tomate           25g     4 Kcal
-  Carne Bife      150g   186 Kcal
-  Limao 1 limao
-  Cal 461 Kcal  carb 58g  Fib 11g Prot 40g Gor 6
-15:00 - Café 
+  Carne Bife      150g   186 Kcal 
+  Cal 461 Kcal  carb 58g  Fib 11g Prot 40g Gor 6 
 18:30 - Lanche da tarde
-  Tapioca de goma 15g     37 Kcal
-  Ovo    2 unid          129 Kcal
-  Patinho  moída 120g    160 Kcal
-  Tomate          25g      4 Kcal
-  limao 1  
-  Cal 330 Kcal   carb 11g  Fib 0g Prot 38g Gor 13
+  Tapioca de goma  15g     37 Kcal
+  Ovo               3u    189 Kcal
+  Patinho  moída  120g    160 Kcal
+  Tomate           25g      4 Kcal
+  mussarela        30g     85 kcal
+  Cal 410 Kcal   carb 11g  Fib 0g Prot 38g Gor 13
 22:00 - Ceia
   Banana          125g  124 Kcal
   Chocolate 70%    25g  245 Kcal
   Whey 3 Protein   30g  126 Kcal
   coco             20g   71 Kcal
-  castanha           5   77 Kcal
-  Cal 643 Kcal   carb 87g  Fib 18g Prot  25g Gor 2g
+  castanha          5g   77 Kcal
+  Cal 723 Kcal   carb 87g  Fib 18g Prot  25g Gor 2g
 
-  Calo 1924 Kcal carb 239g Fib 39g Prot 124g Gor 59g
+  Calo 2004 Kcal carb 239g Fib 39g Prot 124g Gor 59g
 
  
   
 "
 desconsiderar acentos e cedilhas
+
 **Requisitos Funcionais:**
 1. **Estrutura de `Alimento`:**
    - Utilizar a estrutura `Alimento` com os seguintes campos:
      - `nome` (char[51]):.
      - `quantidade` (float):.
+     - `g` (char[1]):.
      - `Kcal` (char[6]):.
 
 **Função imprimirPlanoAlimentar** 
 Imprime no arquivo saida.csv e saida.txt
 os detalhes dos alimentos de uma refeição
-calcula o total de calorias
+calcula o total de calorias           
 na ultima linha imprimir totalCaloriasGeral a soma de totalCalorias.
+
+**Função listaDeCompras**
+Imprime no arquivo lista.csv e lista.txt
+os detalhes de uma lista de compra
+
  

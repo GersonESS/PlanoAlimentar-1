@@ -1,0 +1,106 @@
+programa
+{
+    // Definição da estrutura Alimento
+    tipo Alimento
+    {
+        cadeia nome[51]
+        real quantidade
+        cadeia kcal[6]
+    }
+
+    funcao inteiro imprimirPlanoAlimentar(cadeia arquivoNome, Alimento refeicao[], inteiro tamanho)
+    {
+        inteiro totalCalorias = 0
+        inteiro arquivo = abrirArquivo(arquivoNome, "a")
+
+        se (arquivo == -1)
+        {
+            escreva("Erro ao abrir o arquivo: ", arquivoNome, "\n")
+            retorna 0
+        }
+
+        para (inteiro i = 0; i < tamanho; i++)
+        {
+            escreva(arquivo, refeicao[i].nome, ",", refeicao[i].quantidade, ",", refeicao[i].kcal, "\n")
+            totalCalorias += converteInteiro(refeicao[i].kcal)
+        }
+
+        escreva(arquivo, "Total Calorias,", totalCalorias, " Kcal\n\n")
+        fecharArquivo(arquivo)
+
+        retorna totalCalorias
+    }
+
+    funcao inteiro principal()
+    {
+        // Definindo os alimentos
+        Alimento dejejum[5] = [
+            {"Banana", 125, "124"},
+            {"Aveia em flocos", 30, "118"},
+            {"Coco", 20, "71"},
+            {"Whey 3 Protein", 30, "126"},
+            {"Yakult", 100, "51"}
+        ]
+
+        Alimento almoco[5] = [
+            {"Arroz branco", 125, "160"},
+            {"Feijao carioca", 90, "68"},
+            {"Cenoura", 50, "43"},
+            {"Tomate", 25, "4"},
+            {"Carne Bife", 150, "186"}
+        ]
+
+        Alimento lanche[4] = [
+            {"Tapioca de goma", 15, "37"},
+            {"Ovo", 2, "129"},
+            {"Patinho moida", 120, "160"},
+            {"Tomate", 25, "4"}
+        ]
+
+        Alimento ceia[5] = [
+            {"Banana", 125, "124"},
+            {"Chocolate 70%", 25, "245"},
+            {"Whey 3 Protein", 30, "126"},
+            {"Coco", 20, "71"},
+            {"Castanha", 5, "77"}
+        ]
+
+        cadeia arquivoCSV = "saida.csv"
+        cadeia arquivoTXT = "saida.txt"
+
+        // Criar ou limpar os arquivos CSV e TXT
+        criarArquivo(arquivoCSV)
+        criarArquivo(arquivoTXT)
+
+        inteiro totalCaloriasGeral = 0
+
+        // Imprimir detalhes das refeições nos arquivos
+        escreva(arquivoCSV, "12:00 - Dejejum\n")
+        escreva(arquivoTXT, "12:00 - Dejejum\n")
+        totalCaloriasGeral += imprimirPlanoAlimentar(arquivoCSV, dejejum, 5)
+        imprimirPlanoAlimentar(arquivoTXT, dejejum, 5)
+
+        escreva(arquivoCSV, "14:00 - Almoco\n")
+        escreva(arquivoTXT, "14:00 - Almoco\n")
+        totalCaloriasGeral += imprimirPlanoAlimentar(arquivoCSV, almoco, 5)
+        imprimirPlanoAlimentar(arquivoTXT, almoco, 5)
+
+        escreva(arquivoCSV, "18:30 - Lanche da tarde\n")
+        escreva(arquivoTXT, "18:30 - Lanche da tarde\n")
+        totalCaloriasGeral += imprimirPlanoAlimentar(arquivoCSV, lanche, 4)
+        imprimirPlanoAlimentar(arquivoTXT, lanche, 4)
+
+        escreva(arquivoCSV, "22:00 - Ceia\n")
+        escreva(arquivoTXT, "22:00 - Ceia\n")
+        totalCaloriasGeral += imprimirPlanoAlimentar(arquivoCSV, ceia, 5)
+        imprimirPlanoAlimentar(arquivoTXT, ceia, 5)
+
+        // Imprimir total geral de calorias
+        escreva(arquivoCSV, "Total Calorias Geral,", totalCaloriasGeral, " Kcal\n")
+        escreva(arquivoTXT, "Total Calorias Geral,", totalCaloriasGeral, " Kcal\n")
+
+        escreva("Plano alimentar escrito em ", arquivoCSV, " e ", arquivoTXT, " com sucesso.\n")
+
+        retorna 0
+    }
+}

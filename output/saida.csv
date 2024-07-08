@@ -1,32 +1,33 @@
 12:00 - Dejejum
-Banana,125.00,124
-Aveia em flocos,30.00,118
-Coco,20.00,71
-Whey 3 Protein,30.00,126
-Yakult,100.00,51
-Total Calorias,490 Kcal
+Banana,125,g124,124
+Aveia em flocos,30,g118,118
+Coco,20,g71,71
+Whey 3 Protein,30,g126,126
+yakult,100,g51,51
+Cal,490 Kcal
 
-14:00 - Almoco
-Arroz branco,125.00,160
-Feijao carioca,90.00,68
-Cenoura,50.00,43
-Tomate,25.00,4
-Carne Bife,150.00,186
-Total Calorias,461 Kcal
+14:00 - Almoço
+Arroz branco,125,g160,160
+Feijao carioca,90,g68,68
+Cenour,50,g43,43
+Tomate,25,g4,4
+Carne Bife,150,g186,186
+Cal,461 Kcal
 
 18:30 - Lanche da tarde
-Tapioca de goma,15.00,37
-Ovo,2.00,129
-Patinho moida,120.00,160
-Tomate,25.00,4
-Total Calorias,330 Kcal
+Tapioca de goma,15,g37,37
+Ovo,3,u189,189
+Patinho moida,120,g160,160
+Tomate,25,g4,4
+Mussarela,30,g85,85
+Cal,475 Kcal
 
 22:00 - Ceia
-Banana,125.00,124
-Chocolate 70%,25.00,245
-Whey 3 Protein,30.00,126
-Coco,20.00,71
-Castanha,5.00,77
-Total Calorias,643 Kcal
+Banana,125,g124,124
+Chocolate 70%,25,g245,245
+Whey 3 Protein,30,g126,126
+Coco,20,g71,71
+Castanha,5,g77,77
+Cal,643 Kcal
 
-Total Calorias Geral,1924 Kcal
+Calo,2069 Kcal
